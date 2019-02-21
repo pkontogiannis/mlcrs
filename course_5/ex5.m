@@ -1,4 +1,4 @@
-% Machine Learning Online Class
+%% Machine Learning Online Class
 %  Exercise 5 | Regularized Linear Regression and Bias-Variance
 %
 %  Instructions
@@ -101,7 +101,7 @@ pause;
 %  Next, you should implement the learningCurve function. 
 %
 %  Write Up Note: Since the model is underfitting the data, we expect to
-%                 see a graph with "high bias" -- slide 8 in ML-advice.pdf 
+%                 see a graph with "high bias" -- Figure 3 in ex5.pdf 
 %
 
 lambda = 0;
@@ -166,6 +166,15 @@ pause;
 
 lambda = 0;
 [theta] = trainLinearReg(X_poly, y, lambda);
+
+% For lambda = 1, we see a polynomial fit that follows the data trend well
+% and a learning curve showing that both the cross validation and training
+% error converge to a relatively low value.  This shows the l = 1
+% regularized polynomial regression model does not have the high-bias or
+% high-variance problems. 
+% For lambda = 100, we see a polynomial fit that does not follow the data
+% well. There is too much regularization and the model is unable to fitthe
+% training data. 
 
 % Plot training data and fit
 figure(1);
